@@ -74,7 +74,7 @@ st.markdown("""
 st.markdown("<div class='title'>🤖 Python Code Helper Chatbot</div>", unsafe_allow_html=True)
 
 # ---- Load dataset ----
-df = pd.read_csv("Python codes.csv")
+df = pd.read_csv("Python_codes.csv")
 df["question"] = df["question"].replace("nan", np.nan)
 df = df.dropna(subset=["question"])
 
@@ -116,7 +116,7 @@ for role, text in st.session_state.chat_history:
 st.markdown("</div>", unsafe_allow_html=True)
 
 # ---- Input Box ----
-user_input = st.chat_input("Type your Python question here...")
+user_input = st.chat_input("How to print hello world...")
 
 if user_input:
     if user_input.lower() in ["bye", "exit", "okay bye", "ok bye", "goodbye"]:
