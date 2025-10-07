@@ -7,7 +7,11 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+import nltk
+nltk.download('punkt')
+nltk.download('punkt_tab')
 
+from nltk.tokenize import word_tokenize
 # ---- Page Setup ----
 st.set_page_config(page_title="Python Code Helper", page_icon="🤖", layout="wide")
 
